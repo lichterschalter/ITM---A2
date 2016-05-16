@@ -110,16 +110,31 @@ public class VideoFrameGrabber {
 		// ***************************************************************
 		// Fill in your code here!
 		// ***************************************************************
+                double duration, fps;
+                duration = 4;
+                fps = 1;
+                IContainer cont = IContainer.make();
+                if( cont.open(input.toString(), IContainer.Type.READ, null) > 0 )
+                    duration = cont.getDuration(); 
+                else throw new RuntimeException("Problems with opening the media file!");
+                for( int i = 0; i < cont.getNumStreams(); ++i ){
+                IStream stream = cont.getStream(i);
+                IStreamCoder streamCoder = stream.getStreamCoder();
+                if (streamCoder.getCodecType() == ICodec.Type.CODEC_TYPE_VIDEO) {
+                        fps = streamCoder.getFrameRate().getDouble();
+                    }
+                } 
+                cont.close();
                 IMediaReader mReader = ToolFactory.makeReader( input.toString() );
                 mReader.setBufferedImageTypeToGenerate(BufferedImage.TYPE_3BYTE_BGR);
-                mReader.addListener(new VideoFrameListener( input, outputFile ));
-                mReader.readPacket();
+                mReader.addListener(new VideoFrameListener( input, outputFile, duration, fps ));
                 try{
                         while (mReader.readPacket() == null) ;
                 }catch( Exception ex ){
                         System.out.println( "Problem with reading the packets of " + input.toString() + ": " + ex.getMessage() );
+                        outputFile = new File(" ");
                 }
-                
+                mReader.close();
                             
 		return outputFile;
 
@@ -130,15 +145,20 @@ public class VideoFrameGrabber {
          */
         private static class VideoFrameListener extends MediaListenerAdapter {
                 private File input, output;
-                
+                double duration, fps;
+                boolean grabbed;
+                             
                 /**
                  * Init the class.
                  * @param input file or directory
                  * @param output file
                  */
-                public VideoFrameListener( File input, File output ){
+                public VideoFrameListener( File input, File output, double duration, double fps ){
                     this.input = input;
                     this.output = output;
+                    this.duration = duration;
+                    this.fps = fps;
+                    grabbed = false;
                 }
             
                 /**
@@ -146,23 +166,11 @@ public class VideoFrameGrabber {
                  * @param event from media.readPacket
                  */
                 public void onVideoPicture(IVideoPictureEvent event) {
-                       /* double duration = 1;
-                        double fps = 12;
-                        IContainer cont = IContainer.make();
-                        if( cont.open(input.toString(), IContainer.Type.READ, null) > 0 )
-                            duration = cont.getDuration() / 1000 / 1000 ; 
-                        else throw new RuntimeException("Problems with opening the media file!");
-                        for( int i = 0; i < cont.getNumStreams(); ++i ){
-                            IStream stream = cont.getStream(i);
-                            IStreamCoder streamCoder = stream.getStreamCoder();
-                            if (streamCoder.getCodecType() == ICodec.Type.CODEC_TYPE_VIDEO) {
-                                fps = streamCoder.getFrameRate().getDouble();
-                            }
-                        }                       
-                        */
-                        if( event.getTimeStamp() >= 4.0 / 2 * 24.0 ){
+                        if( event.getTimeStamp() >= duration / 2 && !grabbed ){
+                            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa");
                             try {                            
                                 this.saveImage( event.getImage() );
+                                grabbed = true;
                             } catch (IOException ex) {
                                 System.out.println( "Saving the frame did´nt work. " + ex.getMessage() );
                             }
