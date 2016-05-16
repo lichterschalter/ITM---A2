@@ -142,7 +142,6 @@ public class VideoMetadataGenerator {
 		// Fill in your code here!
 		// ***************************************************************
 		
-		
 		// create video media object
 		VideoMedia media = (VideoMedia) MediaFactory.createMedia(input);
 

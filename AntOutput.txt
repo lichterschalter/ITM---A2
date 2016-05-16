@@ -1,0 +1,21 @@
+
+    ITM build file
+	
+Main targets:
+
+ AudioMetadataGenerator   test the audio metadata generator. Example: ant.bat AudioMetadataGenerator -Dinput=media/audio/ -Doutput=test/
+ AudioPlayer              play an audio file. Example: ant.bat AudioPlayer -Dinput=media/audio/mySong.mp3
+ AudioThumbGenerator      test the audio thumbnail generator. Example: ant.bat AudioThumbGenerator -Dinput=media/audio/ -Doutput=test/ -Dlength=10
+ ImageHistogramGenerator  test the ImageHistogramGenerator: example: ant.bat ImageHistogramGenerator -Dinput=media/img/ -Doutput=test/ -Dbins=256
+ ImageMetadataGenerator   test the ImageMetadataGenerator: example: ant.bat ImageMetadataGenerator -Dinput=media/img/ -Doutput=test/
+ ImageThumbnailGenerator  test the ImageThumbnailGenerator: example: ant.bat ImageThumbnailGenerator -Dinput=media/img/ -Doutput=test/ -Drotation=90
+ VideoFrameGrabber        test the video thumbnail generator. Example: ant.bat VideoFrameGrabber -Dinput=media/video/ -Doutput=test/
+ VideoMetadataGenerator   test the video metadata generator. Example: ant.bat VideoMetadataGenerator -Dinput=media/video/ -Doutput=test/
+ VideoThumbnailGenerator  test the video thumb generator. Example: ant.bat VideoThumbnailGenerator -Dinput=media/video/panda.avi -Doutput=test/
+ build                    Build the webapp
+ clean                    complete clean up
+ clean-build              clean build directories
+ clean-thumbs             clean all generated thumbnails and metadata
+ compile                  compile the source
+ javadoc                  creates the javadoc
+Default target: build
