@@ -5,9 +5,21 @@ package itm.video;
  (c) University of Vienna 2009-2016
  *******************************************************************************/
 
+import com.xuggle.mediatool.IMediaReader;
+import com.xuggle.mediatool.MediaListenerAdapter;
+import com.xuggle.mediatool.ToolFactory;
+import com.xuggle.mediatool.event.IVideoPictureEvent;
+import com.xuggle.xuggler.ICodec;
+import com.xuggle.xuggler.IContainer;
+import com.xuggle.xuggler.IStream;
+import com.xuggle.xuggler.IStreamCoder;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.awt.image.BufferedImage;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 
 /**
  * 
@@ -98,10 +110,51 @@ public class VideoFrameGrabber {
 		// ***************************************************************
 		// Fill in your code here!
 		// ***************************************************************
-
+                IMediaReader mReader = ToolFactory.makeReader( input.toString() );
+                mReader.setBufferedImageTypeToGenerate(BufferedImage.TYPE_3BYTE_BGR);
+                outputFile = new File(output.getAbsolutePath() + "/" + input.getName() + ".jpeg");
+                mReader.addListener(new VideoFrameListener( input, output ));
+                while (mReader.readPacket() == null) ;
+                            
 		return outputFile;
 
 	}
+        
+        private static class VideoFrameListener extends MediaListenerAdapter {
+                private File input, output;
+                
+                public VideoFrameListener( File input, File output ){
+                    this.input = input;
+                    this.output = output;
+                }
+            
+                public void onVideoPicture(IVideoPictureEvent event) {
+                        double duration = 1;
+                        double fps = 12;
+                        IContainer cont = IContainer.make();
+                        if( cont.open(input.toString(), IContainer.Type.READ, null) > 0 )
+                            duration = cont.getDuration() / 1000 / 1000 ;                       
+                        for( int i = 0; i < cont.getNumStreams(); ++i ){
+                            IStream stream = cont.getStream(i);
+                            IStreamCoder streamCoder = stream.getStreamCoder();
+                            if (streamCoder.getCodecType() == ICodec.Type.CODEC_TYPE_VIDEO) {
+                                fps = streamCoder.getFrameRate().getDouble();
+                            }
+                        }                       
+                        
+                        if( event.getTimeStamp() >= duration / 2 * fps ){
+                            try {                            
+                                this.saveImage( event.getImage() );
+                            } catch (IOException ex) {
+                                System.out.println( "Saving the frame did´nt work. " + ex.getMessage() );
+                            }
+                        }
+                }
+                
+                public void saveImage( BufferedImage buf ) throws IOException{
+                        ImageIO.write( buf, "JPEG", output ); 
+                }
+        }
 
 	/**
 	 * Main method. Parses the commandline parameters and prints usage
