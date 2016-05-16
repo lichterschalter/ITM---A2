@@ -112,28 +112,46 @@ public class VideoFrameGrabber {
 		// ***************************************************************
                 IMediaReader mReader = ToolFactory.makeReader( input.toString() );
                 mReader.setBufferedImageTypeToGenerate(BufferedImage.TYPE_3BYTE_BGR);
-                outputFile = new File(output.getAbsolutePath() + "/" + input.getName() + ".jpeg");
-                mReader.addListener(new VideoFrameListener( input, output ));
-                while (mReader.readPacket() == null) ;
+                mReader.addListener(new VideoFrameListener( input, outputFile ));
+                mReader.readPacket();
+                try{
+                        while (mReader.readPacket() == null) ;
+                }catch( Exception ex ){
+                        System.out.println( "Problem with reading the packets of " + input.toString() + ": " + ex.getMessage() );
+                }
+                
                             
 		return outputFile;
 
 	}
         
+        /**
+         * This class grabs a BufferedImage of the middle of the video and saves is as JPEG.
+         */
         private static class VideoFrameListener extends MediaListenerAdapter {
                 private File input, output;
                 
+                /**
+                 * Init the class.
+                 * @param input file or directory
+                 * @param output file
+                 */
                 public VideoFrameListener( File input, File output ){
                     this.input = input;
                     this.output = output;
                 }
             
+                /**
+                 * Grab a frame if the timestamp is the half of the duration of the video.
+                 * @param event from media.readPacket
+                 */
                 public void onVideoPicture(IVideoPictureEvent event) {
-                        double duration = 1;
+                       /* double duration = 1;
                         double fps = 12;
                         IContainer cont = IContainer.make();
                         if( cont.open(input.toString(), IContainer.Type.READ, null) > 0 )
-                            duration = cont.getDuration() / 1000 / 1000 ;                       
+                            duration = cont.getDuration() / 1000 / 1000 ; 
+                        else throw new RuntimeException("Problems with opening the media file!");
                         for( int i = 0; i < cont.getNumStreams(); ++i ){
                             IStream stream = cont.getStream(i);
                             IStreamCoder streamCoder = stream.getStreamCoder();
@@ -141,8 +159,8 @@ public class VideoFrameGrabber {
                                 fps = streamCoder.getFrameRate().getDouble();
                             }
                         }                       
-                        
-                        if( event.getTimeStamp() >= duration / 2 * fps ){
+                        */
+                        if( event.getTimeStamp() >= 4.0 / 2 * 24.0 ){
                             try {                            
                                 this.saveImage( event.getImage() );
                             } catch (IOException ex) {
@@ -151,6 +169,11 @@ public class VideoFrameGrabber {
                         }
                 }
                 
+                /**
+                 * Save a BufferedImage to a file.
+                 * @param buf BufferedImage to save
+                 * @throws IOException 
+                 */
                 public void saveImage( BufferedImage buf ) throws IOException{
                         ImageIO.write( buf, "JPEG", output ); 
                 }

@@ -170,7 +170,7 @@ public class VideoMetadataGenerator {
                         media.setAudioSampleRate( streamCoder.getSampleRate() );
                     }
                 }
-                media.setAudioBitRate( cont.getBitRate() /1000 /8 );
+                media.setAudioBitRate( cont.getBitRate() /1000 );
 		
 		// add video tag
                 media.addTag( "video" );
