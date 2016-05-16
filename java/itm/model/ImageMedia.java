@@ -315,7 +315,7 @@ public class ImageMedia extends AbstractMedia
             // ***************************************************************
             
             // read and set properties
-        	if ( line.startsWith( "width: " ) ) {
+            if ( line.startsWith( "width: " ) ) {
                 setWidth( Integer.parseInt(line.substring( "width: ".length() ) ) );
                 } else
             if ( line.startsWith( "height: " ) ) {

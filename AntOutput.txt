@@ -19,3 +19,527 @@ Main targets:
  compile                  compile the source
  javadoc                  creates the javadoc
 Default target: build
+
+clean-thumbs:
+     [echo] Deleting thumbnail directory /home/rustong_pu/Programming/ITM - A2/thumbnails and /home/rustong_pu/Programming/ITM - A2/webapps/itm/media/md if existing
+
+clean-build:
+     [echo] Deleting build directory /home/rustong_pu/Programming/ITM - A2/build and /home/rustong_pu/Programming/ITM - A2/webapps/itm/WEB-INF/classes if existing
+
+clean:
+
+BUILD SUCCESSFUL
+
+init:
+    [mkdir] Created dir: /home/rustong_pu/Programming/ITM - A2/build
+
+compile:
+    [javac] Compiling 18 source files to /home/rustong_pu/Programming/ITM - A2/build
+
+BUILD SUCCESSFUL
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+init:
+
+compile:
+
+ImageThumbnailGenerator:
+     [java] converted media/img/b20nature_plants245.jpg to /home/rustong_pu/Programming/ITM - A2/out/b20nature_plants245.jpg.png
+     [java] converted media/img/peafowl_picture1.JPG to /home/rustong_pu/Programming/ITM - A2/out/peafowl_picture1.JPG.png
+     [java] converted media/img/b2seaanimals005.jpg to /home/rustong_pu/Programming/ITM - A2/out/b2seaanimals005.jpg.png
+     [java] converted media/img/b1shell008.jpg to /home/rustong_pu/Programming/ITM - A2/out/b1shell008.jpg.png
+     [java] converted media/img/elephant14m.JPG to /home/rustong_pu/Programming/ITM - A2/out/elephant14m.JPG.png
+     [java] converted media/img/zebra3m.JPG to /home/rustong_pu/Programming/ITM - A2/out/zebra3m.JPG.png
+     [java] converted media/img/picture_of_coati.JPG to /home/rustong_pu/Programming/ITM - A2/out/picture_of_coati.JPG.png
+     [java] converted media/img/b3_seaanimals014.jpg to /home/rustong_pu/Programming/ITM - A2/out/b3_seaanimals014.jpg.png
+     [java] converted media/img/b9nature_plants064.jpg to /home/rustong_pu/Programming/ITM - A2/out/b9nature_plants064.jpg.png
+     [java] converted media/img/picture_of_goat11.JPG to /home/rustong_pu/Programming/ITM - A2/out/picture_of_goat11.JPG.png
+     [java] converted media/img/blue_sky5m.JPG to /home/rustong_pu/Programming/ITM - A2/out/blue_sky5m.JPG.png
+     [java] converted media/img/elephant14m.png to /home/rustong_pu/Programming/ITM - A2/out/elephant14m.png.png
+     [java] converted media/img/b17maartent1427.gif to /home/rustong_pu/Programming/ITM - A2/out/b17maartent1427.gif.png
+     [java] converted media/img/the_real_firefox.png to /home/rustong_pu/Programming/ITM - A2/out/the_real_firefox.png.png
+     [java] converted media/img/b17maartent1427.jpg to /home/rustong_pu/Programming/ITM - A2/out/b17maartent1427.jpg.png
+     [java] converted media/img/picture_of_coati_dithered.png to /home/rustong_pu/Programming/ITM - A2/out/picture_of_coati_dithered.png.png
+     [java] converted media/img/the_real_firefox_dithered.bmp to /home/rustong_pu/Programming/ITM - A2/out/the_real_firefox_dithered.bmp.png
+     [java] converted media/img/b1murene.jpg to /home/rustong_pu/Programming/ITM - A2/out/b1murene.jpg.png
+     [java] converted media/img/b1murene.gif to /home/rustong_pu/Programming/ITM - A2/out/b1murene.gif.png
+     [java] converted media/img/b17barb026_dithered.gif to /home/rustong_pu/Programming/ITM - A2/out/b17barb026_dithered.gif.png
+     [java] converted media/img/blue_sky4m.JPG to /home/rustong_pu/Programming/ITM - A2/out/blue_sky4m.JPG.png
+     [java] converted media/img/underwater_rugby.JPG to /home/rustong_pu/Programming/ITM - A2/out/underwater_rugby.JPG.png
+     [java] converted media/img/b17barb026.jpg to /home/rustong_pu/Programming/ITM - A2/out/b17barb026.jpg.png
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+ImageMetadataGenerator:
+     [java] converted media/img/b20nature_plants245.jpg to out
+     [java] converted media/img/peafowl_picture1.JPG to out
+     [java] converted media/img/b2seaanimals005.jpg to out
+     [java] converted media/img/b1shell008.jpg to out
+     [java] converted media/img/elephant14m.JPG to out
+     [java] converted media/img/zebra3m.JPG to out
+     [java] converted media/img/picture_of_coati.JPG to out
+     [java] converted media/img/b3_seaanimals014.jpg to out
+     [java] converted media/img/b9nature_plants064.jpg to out
+     [java] converted media/img/picture_of_goat11.JPG to out
+     [java] converted media/img/blue_sky5m.JPG to out
+     [java] converted media/img/elephant14m.png to out
+     [java] converted media/img/b17maartent1427.gif to out
+     [java] converted media/img/the_real_firefox.png to out
+     [java] converted media/img/b17maartent1427.jpg to out
+     [java] converted media/img/picture_of_coati_dithered.png to out
+     [java] converted media/img/the_real_firefox_dithered.bmp to out
+     [java] converted media/img/b1murene.jpg to out
+     [java] converted media/img/b1murene.gif to out
+     [java] converted media/img/b17barb026_dithered.gif to out
+     [java] converted media/img/blue_sky4m.JPG to out
+     [java] converted media/img/underwater_rugby.JPG to out
+     [java] converted media/img/b17barb026.jpg to out
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+ImageHistogramGenerator:
+     [java] converted media/img/b20nature_plants245.jpg to out/b20nature_plants245.jpg.hist.png
+     [java] converted media/img/peafowl_picture1.JPG to out/peafowl_picture1.JPG.hist.png
+     [java] converted media/img/b2seaanimals005.jpg to out/b2seaanimals005.jpg.hist.png
+     [java] converted media/img/b1shell008.jpg to out/b1shell008.jpg.hist.png
+     [java] converted media/img/elephant14m.JPG to out/elephant14m.JPG.hist.png
+     [java] converted media/img/zebra3m.JPG to out/zebra3m.JPG.hist.png
+     [java] converted media/img/picture_of_coati.JPG to out/picture_of_coati.JPG.hist.png
+     [java] converted media/img/b3_seaanimals014.jpg to out/b3_seaanimals014.jpg.hist.png
+     [java] converted media/img/b9nature_plants064.jpg to out/b9nature_plants064.jpg.hist.png
+     [java] converted media/img/picture_of_goat11.JPG to out/picture_of_goat11.JPG.hist.png
+     [java] converted media/img/blue_sky5m.JPG to out/blue_sky5m.JPG.hist.png
+     [java] converted media/img/elephant14m.png to out/elephant14m.png.hist.png
+     [java] converted media/img/b17maartent1427.gif to out/b17maartent1427.gif.hist.png
+     [java] converted media/img/the_real_firefox.png to out/the_real_firefox.png.hist.png
+     [java] converted media/img/b17maartent1427.jpg to out/b17maartent1427.jpg.hist.png
+     [java] converted media/img/picture_of_coati_dithered.png to out/picture_of_coati_dithered.png.hist.png
+     [java] converted media/img/the_real_firefox_dithered.bmp to out/the_real_firefox_dithered.bmp.hist.png
+     [java] converted media/img/b1murene.jpg to out/b1murene.jpg.hist.png
+     [java] converted media/img/b1murene.gif to out/b1murene.gif.hist.png
+     [java] converted media/img/b17barb026_dithered.gif to out/b17barb026_dithered.gif.hist.png
+     [java] converted media/img/blue_sky4m.JPG to out/blue_sky4m.JPG.hist.png
+     [java] converted media/img/underwater_rugby.JPG to out/underwater_rugby.JPG.hist.png
+     [java] converted media/img/b17barb026.jpg to out/b17barb026.jpg.hist.png
+
+BUILD SUCCESSFUL
+
+clean-thumbs:
+     [echo] Deleting thumbnail directory /home/rustong_pu/Programming/ITM - A2/thumbnails and /home/rustong_pu/Programming/ITM - A2/webapps/itm/media/md if existing
+
+clean-build:
+     [echo] Deleting build directory /home/rustong_pu/Programming/ITM - A2/build and /home/rustong_pu/Programming/ITM - A2/webapps/itm/WEB-INF/classes if existing
+
+clean:
+
+BUILD SUCCESSFUL
+
+init:
+    [mkdir] Created dir: /home/rustong_pu/Programming/ITM - A2/build
+
+compile:
+    [javac] Compiling 18 source files to /home/rustong_pu/Programming/ITM - A2/build
+
+BUILD SUCCESSFUL
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD FAILED
+
+Target "ImageConverter" does not exist in the project "2016_ITM_UE". 
+	at org.apache.tools.ant.Project.tsort(Project.java:1821)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1729)
+	at org.apache.tools.ant.Project.topoSort(Project.java:1692)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+init:
+
+compile:
+
+ImageThumbnailGenerator:
+     [java] converted media/img/b20nature_plants245.jpg to /home/rustong_pu/Programming/ITM - A2/out/b20nature_plants245.jpg.png
+     [java] converted media/img/peafowl_picture1.JPG to /home/rustong_pu/Programming/ITM - A2/out/peafowl_picture1.JPG.png
+     [java] converted media/img/b2seaanimals005.jpg to /home/rustong_pu/Programming/ITM - A2/out/b2seaanimals005.jpg.png
+     [java] converted media/img/b1shell008.jpg to /home/rustong_pu/Programming/ITM - A2/out/b1shell008.jpg.png
+     [java] converted media/img/elephant14m.JPG to /home/rustong_pu/Programming/ITM - A2/out/elephant14m.JPG.png
+     [java] converted media/img/zebra3m.JPG to /home/rustong_pu/Programming/ITM - A2/out/zebra3m.JPG.png
+     [java] converted media/img/picture_of_coati.JPG to /home/rustong_pu/Programming/ITM - A2/out/picture_of_coati.JPG.png
+     [java] converted media/img/b3_seaanimals014.jpg to /home/rustong_pu/Programming/ITM - A2/out/b3_seaanimals014.jpg.png
+     [java] converted media/img/b9nature_plants064.jpg to /home/rustong_pu/Programming/ITM - A2/out/b9nature_plants064.jpg.png
+     [java] converted media/img/picture_of_goat11.JPG to /home/rustong_pu/Programming/ITM - A2/out/picture_of_goat11.JPG.png
+     [java] converted media/img/blue_sky5m.JPG to /home/rustong_pu/Programming/ITM - A2/out/blue_sky5m.JPG.png
+     [java] converted media/img/elephant14m.png to /home/rustong_pu/Programming/ITM - A2/out/elephant14m.png.png
+     [java] converted media/img/b17maartent1427.gif to /home/rustong_pu/Programming/ITM - A2/out/b17maartent1427.gif.png
+     [java] converted media/img/the_real_firefox.png to /home/rustong_pu/Programming/ITM - A2/out/the_real_firefox.png.png
+     [java] converted media/img/b17maartent1427.jpg to /home/rustong_pu/Programming/ITM - A2/out/b17maartent1427.jpg.png
+     [java] converted media/img/picture_of_coati_dithered.png to /home/rustong_pu/Programming/ITM - A2/out/picture_of_coati_dithered.png.png
+     [java] converted media/img/the_real_firefox_dithered.bmp to /home/rustong_pu/Programming/ITM - A2/out/the_real_firefox_dithered.bmp.png
+     [java] converted media/img/b1murene.jpg to /home/rustong_pu/Programming/ITM - A2/out/b1murene.jpg.png
+     [java] converted media/img/b1murene.gif to /home/rustong_pu/Programming/ITM - A2/out/b1murene.gif.png
+     [java] converted media/img/b17barb026_dithered.gif to /home/rustong_pu/Programming/ITM - A2/out/b17barb026_dithered.gif.png
+     [java] converted media/img/blue_sky4m.JPG to /home/rustong_pu/Programming/ITM - A2/out/blue_sky4m.JPG.png
+     [java] converted media/img/underwater_rugby.JPG to /home/rustong_pu/Programming/ITM - A2/out/underwater_rugby.JPG.png
+     [java] converted media/img/b17barb026.jpg to /home/rustong_pu/Programming/ITM - A2/out/b17barb026.jpg.png
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+ImageMetadataGenerator:
+     [java] converted media/img/b20nature_plants245.jpg to out
+     [java] converted media/img/peafowl_picture1.JPG to out
+     [java] converted media/img/b2seaanimals005.jpg to out
+     [java] converted media/img/b1shell008.jpg to out
+     [java] converted media/img/elephant14m.JPG to out
+     [java] converted media/img/zebra3m.JPG to out
+     [java] converted media/img/picture_of_coati.JPG to out
+     [java] converted media/img/b3_seaanimals014.jpg to out
+     [java] converted media/img/b9nature_plants064.jpg to out
+     [java] converted media/img/picture_of_goat11.JPG to out
+     [java] converted media/img/blue_sky5m.JPG to out
+     [java] converted media/img/elephant14m.png to out
+     [java] converted media/img/b17maartent1427.gif to out
+     [java] converted media/img/the_real_firefox.png to out
+     [java] converted media/img/b17maartent1427.jpg to out
+     [java] converted media/img/picture_of_coati_dithered.png to out
+     [java] converted media/img/the_real_firefox_dithered.bmp to out
+     [java] converted media/img/b1murene.jpg to out
+     [java] converted media/img/b1murene.gif to out
+     [java] converted media/img/b17barb026_dithered.gif to out
+     [java] converted media/img/blue_sky4m.JPG to out
+     [java] converted media/img/underwater_rugby.JPG to out
+     [java] converted media/img/b17barb026.jpg to out
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+ImageHistogramGenerator:
+     [java] converted media/img/b20nature_plants245.jpg to out/b20nature_plants245.jpg.hist.png
+     [java] converted media/img/peafowl_picture1.JPG to out/peafowl_picture1.JPG.hist.png
+     [java] converted media/img/b2seaanimals005.jpg to out/b2seaanimals005.jpg.hist.png
+     [java] converted media/img/b1shell008.jpg to out/b1shell008.jpg.hist.png
+     [java] converted media/img/elephant14m.JPG to out/elephant14m.JPG.hist.png
+     [java] converted media/img/zebra3m.JPG to out/zebra3m.JPG.hist.png
+     [java] converted media/img/picture_of_coati.JPG to out/picture_of_coati.JPG.hist.png
+     [java] converted media/img/b3_seaanimals014.jpg to out/b3_seaanimals014.jpg.hist.png
+     [java] converted media/img/b9nature_plants064.jpg to out/b9nature_plants064.jpg.hist.png
+     [java] converted media/img/picture_of_goat11.JPG to out/picture_of_goat11.JPG.hist.png
+     [java] converted media/img/blue_sky5m.JPG to out/blue_sky5m.JPG.hist.png
+     [java] converted media/img/elephant14m.png to out/elephant14m.png.hist.png
+     [java] converted media/img/b17maartent1427.gif to out/b17maartent1427.gif.hist.png
+     [java] converted media/img/the_real_firefox.png to out/the_real_firefox.png.hist.png
+     [java] converted media/img/b17maartent1427.jpg to out/b17maartent1427.jpg.hist.png
+     [java] converted media/img/picture_of_coati_dithered.png to out/picture_of_coati_dithered.png.hist.png
+     [java] converted media/img/the_real_firefox_dithered.bmp to out/the_real_firefox_dithered.bmp.hist.png
+     [java] converted media/img/b1murene.jpg to out/b1murene.jpg.hist.png
+     [java] converted media/img/b1murene.gif to out/b1murene.gif.hist.png
+     [java] converted media/img/b17barb026_dithered.gif to out/b17barb026_dithered.gif.hist.png
+     [java] converted media/img/blue_sky4m.JPG to out/blue_sky4m.JPG.hist.png
+     [java] converted media/img/underwater_rugby.JPG to out/underwater_rugby.JPG.hist.png
+     [java] converted media/img/b17barb026.jpg to out/b17barb026.jpg.hist.png
+
+BUILD SUCCESSFUL
+
+clean-thumbs:
+     [echo] Deleting thumbnail directory /home/rustong_pu/Programming/ITM - A2/thumbnails and /home/rustong_pu/Programming/ITM - A2/webapps/itm/media/md if existing
+
+clean-build:
+     [echo] Deleting build directory /home/rustong_pu/Programming/ITM - A2/build and /home/rustong_pu/Programming/ITM - A2/webapps/itm/WEB-INF/classes if existing
+
+clean:
+
+BUILD SUCCESSFUL
+
+init:
+    [mkdir] Created dir: /home/rustong_pu/Programming/ITM - A2/build
+
+compile:
+    [javac] Compiling 18 source files to /home/rustong_pu/Programming/ITM - A2/build
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+VideoMetadataGenerator:
+     [java] created metadata for file media/video/panda.avi in out
+     [java] created metadata for file media/video/dutch.asf in out
+     [java] created metadata for file media/video/space.flv in out
+     [java] created metadata for file media/video/DREIZEHN.AVI in out
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+VideoFrameGrabber:
+     [java] converted media/video/panda.avi to out/panda.avi_thumb.jpg
+     [java] converted media/video/dutch.asf to out/dutch.asf_thumb.jpg
+     [java] converted media/video/space.flv to out/space.flv_thumb.jpg
+     [java] converted media/video/DREIZEHN.AVI to out/DREIZEHN.AVI_thumb.jpg
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+VideoThumbnailGenerator:
+     [java] processed file media/video/panda.avi to out
+     [java] processed file media/video/dutch.asf to out
+     [java] processed file media/video/space.flv to out
+     [java] processed file media/video/DREIZEHN.AVI to out
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+VideoThumbnailGenerator:
+     [java] processed file media/video/panda.avi to out
+     [java] processed file media/video/dutch.asf to out
+     [java] processed file media/video/space.flv to out
+     [java] processed file media/video/DREIZEHN.AVI to out
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+AudioThumbGenerator:
+     [java] converted media/audio/error.wav to out/error.wav.wav
+     [java] converted media/audio/Hombre.mp3 to out/Hombre.mp3.wav
+     [java] converted media/audio/FireFire.mp3 to out/FireFire.mp3.wav
+     [java] converted media/audio/Amazon.mp3 to out/Amazon.mp3.wav
+     [java] converted media/audio/Epoq-Lepidoptera.ogg to out/Epoq-Lepidoptera.ogg.wav
+     [java] converted media/audio/DashTheCurry[Skit].mp3 to out/DashTheCurry[Skit].mp3.wav
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+AudioMetadataGenerator:
+     [java] created metadata for file media/audio/error.wav in out
+     [java] created metadata for file media/audio/Hombre.mp3 in out
+     [java] created metadata for file media/audio/FireFire.mp3 in out
+     [java] created metadata for file media/audio/Amazon.mp3 in out
+     [java] created metadata for file media/audio/Epoq-Lepidoptera.ogg in out
+     [java] created metadata for file media/audio/DashTheCurry[Skit].mp3 in out
+
+BUILD SUCCESSFUL
+
+init:
+
+compile:
+
+AudioPlayer:
+     [java] java.lang.NullPointerException
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:194)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:747)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:201)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:104)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:288)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:105)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:357)
+	at org.apache.tools.ant.Target.performTasks(Target.java:385)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1329)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+Caused by: java.lang.NullPointerException
+	at itm.audio.AudioPlayer.playAudio(Unknown Source)
+	at itm.audio.AudioPlayer.main(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	... 19 more
+--- Nested Exception ---
+java.lang.NullPointerException
+	at itm.audio.AudioPlayer.playAudio(Unknown Source)
+	at itm.audio.AudioPlayer.main(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:747)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:201)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:104)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:288)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:105)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:357)
+	at org.apache.tools.ant.Target.performTasks(Target.java:385)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1329)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+
+BUILD SUCCESSFUL

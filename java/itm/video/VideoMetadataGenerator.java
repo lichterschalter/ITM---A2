@@ -25,7 +25,9 @@ import javax.media.protocol.DataSource;
 import com.xuggle.xuggler.IContainer;
 import com.xuggle.xuggler.IStream;
 import com.xuggle.xuggler.IStreamCoder;
-import com.xuggle.xuggler.ICodec.Type;
+import com.xuggle.xuggler.ICodec;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 /**
  * This class reads video files, extracts metadata for both the audio and the
@@ -141,15 +143,44 @@ public class VideoMetadataGenerator {
 		// ***************************************************************
 		// Fill in your code here!
 		// ***************************************************************
-		
+		                
 		// create video media object
 		VideoMedia media = (VideoMedia) MediaFactory.createMedia(input);
 
 		// set video and audio stream metadata 
+                IContainer cont = IContainer.make();
+                if( cont.open(input.toString(), IContainer.Type.READ, null) < 0 )
+                    throw new RuntimeException("Problems with opening the media file!");
+                media.setVideoLength( cont.getDuration() );
+                
+                for( int i = 0; i < cont.getNumStreams(); ++i ){
+                    IStream stream = cont.getStream(i);
+                    IStreamCoder streamCoder = stream.getStreamCoder();
+                    if (streamCoder.getCodecType() == ICodec.Type.CODEC_TYPE_VIDEO) {
+                        media.setVideoCodec( streamCoder.getCodec().getName() );
+                        media.setVideoCodecID( streamCoder.getCodecID().name() ); 
+                        media.setVideoWidth( streamCoder.getWidth() );
+                        media.setVideoHeight( streamCoder.getHeight() );
+                        media.setVideoFrameRate( streamCoder.getFrameRate().getDouble() );
+                    }
+                    if( streamCoder.getCodecType() == ICodec.Type.CODEC_TYPE_AUDIO) {
+                        media.setAudioCodec( streamCoder.getCodec().getName() );
+                        media.setAudioCodecID( streamCoder.getCodecID().name() );
+                        media.setAudioChannels( streamCoder.getChannels() );
+                        media.setAudioSampleRate( streamCoder.getSampleRate() );
+                    }
+                }
+                media.setAudioBitRate( cont.getBitRate() );
 		
 		// add video tag
+                media.addTag( "video" );
 
 		// write metadata
+                StringBuffer strBuff = media.serializeObject();
+                BufferedWriter buffWriter = new BufferedWriter( new FileWriter( outputFile ) );
+                buffWriter.write( strBuff.toString() );
+                buffWriter.flush();
+                buffWriter.close();
 		
 		return media;
 	}
