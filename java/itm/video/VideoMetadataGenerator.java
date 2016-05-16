@@ -151,7 +151,7 @@ public class VideoMetadataGenerator {
                 IContainer cont = IContainer.make();
                 if( cont.open(input.toString(), IContainer.Type.READ, null) < 0 )
                     throw new RuntimeException("Problems with opening the media file!");
-                media.setVideoLength( cont.getDuration() );
+                media.setVideoLength( cont.getDuration() / 1000 / 1000 );
                 
                 for( int i = 0; i < cont.getNumStreams(); ++i ){
                     IStream stream = cont.getStream(i);
@@ -170,7 +170,7 @@ public class VideoMetadataGenerator {
                         media.setAudioSampleRate( streamCoder.getSampleRate() );
                     }
                 }
-                media.setAudioBitRate( cont.getBitRate() );
+                media.setAudioBitRate( cont.getBitRate() /1000 /8 );
 		
 		// add video tag
                 media.addTag( "video" );

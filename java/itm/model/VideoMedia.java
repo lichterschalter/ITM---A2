@@ -294,14 +294,14 @@ public class VideoMedia extends AbstractMedia {
         out.println( "video_codec: " + getVideoCodec() );
         out.println( "video_codec_ID: " + getVideoCodecID() );
         out.println( "video_frame_rate: " + getVideoFrameRate() );
-        out.println( "video_height: " + getVideoHeight() );
-        out.println( "video_width: " + getVideoWidth() );
-        out.println( "video_length: " + getVideoLength() );
+        out.println( "video_height_[pixels]: " + getVideoHeight() );
+        out.println( "video_width_[pixels]: " + getVideoWidth() );
+        out.println( "video_length_[seconds]: " + getVideoLength() );
         out.println( "audio_codec: " + getAudioCodec() );
         out.println( "audio_codec_ID: " + getAudioCodecID() );
-        out.println( "audio_bit_rate: " + getAudioBitRate() );
+        out.println( "audio_bit_rate_[kb/s]: " + getAudioBitRate() );
         out.println( "audio_channels: " + getAudioChannels() );
-        out.println( "audio_sampel_rate: " + getAudioSampleRate() );
+        out.println( "audio_sampel_rate_[Hz]: " + getAudioSampleRate() );
 
         
         return data.getBuffer();
@@ -333,13 +333,13 @@ public class VideoMedia extends AbstractMedia {
             else if ( line.startsWith( "video_frame_rate: " ) ) {
             setVideoFrameRate( Double.parseDouble( line.substring( "video_frame_rate: ".length() ) ) );
             }
-            else if ( line.startsWith( "video_height: " ) ) {
+            else if ( line.startsWith( "video_height_[pixels]: " ) ) {
             setVideoHeight( Integer.parseInt( line.substring( "video_height: ".length() ) ) );
             }
-            else if ( line.startsWith( "video_width: " ) ) {
+            else if ( line.startsWith( "video_width_[pixels]:  " ) ) {
             setVideoWidth( Integer.parseInt( line.substring( "video_width: ".length() ) ) );
             }
-            else if ( line.startsWith( "video_length: " ) ) {
+            else if ( line.startsWith( "video_length_[seconds]: " ) ) {
             setVideoLength( Long.parseLong( line.substring( "video_length: ".length() ) ) );
             }
             else if ( line.startsWith( "audio_codec: " ) ) {
@@ -348,13 +348,13 @@ public class VideoMedia extends AbstractMedia {
             else if ( line.startsWith( "audio_codec_id: " ) ) {
             setAudioCodecID( line.substring( "audio_codec_id: ".length() ) );
             }
-            else if ( line.startsWith( "audio_bit_rate: " ) ) {
+            else if ( line.startsWith( "audio_bit_rate_[kb/s]: " ) ) {
             setAudioBitRate( Integer.parseInt( line.substring( "audio_bit_rate: ".length() ) ) );
             }
             else if ( line.startsWith( "audio_channels: " ) ) {
             setAudioChannels( Integer.parseInt( line.substring( "audio_channels: ".length() ) ) );
             }
-            else if ( line.startsWith( "audio_sample_rate: " ) ) {
+            else if ( line.startsWith( "audio_sampel_rate_[Hz]: " ) ) {
             setAudioSampleRate( Double.parseDouble( line.substring( "audio_sample_rate: ".length() ) ) );
             }
         }
